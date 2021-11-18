@@ -134,7 +134,7 @@ namespace GameplayIngredients
                         UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene( newInstance, SpawnTarget.scene);
                         break;
                     case SpawnLocation.ChildOfTarget:
-                        newInstance.transform.parent = SpawnTarget.transform;
+                        newInstance.transform.SetParent(SpawnTarget.transform);
                         break;
                     case SpawnLocation.DontDestroyOnLoad:
                         DontDestroyOnLoad(newInstance);
